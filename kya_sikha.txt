@@ -1,0 +1,21 @@
+ifstream -> input file stream -> class 
+provide facility to create input from some to some file
+it creates an object associated with given file
+
+is_open-> checking whether file is opened or not
+or we can say ki file is in our instance or not
+
+getline-> taking string from line to line
+
+close-> closing the file when work done
+
+
+p_thread is an api that  for all thread related functions
+
+pthread_create is a function used to create new thread
+4 attributes -> 
+thread-> pointer to pthread_t var where system can store id of new thread
+attr->pointer to a thread attributes object that define thread properties(default use null)
+routine-> pointer to func that thread will exec (return void* and accept void*)
+arg-> a single argument passed to thread func. Use null if no argument is needed. We can pass a struct or pointer to pass multiple values
+
