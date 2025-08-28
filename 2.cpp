@@ -1,14 +1,15 @@
 // Problem 2
 
 #include<bits/stdc++.h>
-#include<pthread.h>
 using namespace std;
 
 #define M 5
 
 void* f(void *p){
     cout<<"Thread created"<<endl;
+    return NULL;
 } 
+
 int main(){
     int k;
     pthread_t jp[M];  // collection of m threads

@@ -19,3 +19,16 @@ attr->pointer to a thread attributes object that define thread properties(defaul
 routine-> pointer to func that thread will exec (return void* and accept void*)
 arg-> a single argument passed to thread func. Use null if no argument is needed. We can pass a struct or pointer to pass multiple values
 
+
+Shared data is defined outside any function(global scope).
+All threads can access and modify it
+
+pthread_mutex_t is a data type provided by the POSIX Threads (pthreads) library used to implement mutexes (mutual exclusions). A mutex is a synchronization primitive used to protect shared resources (like a shared index or data structure) from concurrent access by multiple threads.
+pthread_mutex_init-> 2args pointer to mutex var and pointer to mutex attributes
+pthread_mutex_lock-> pointer to the mutex to pthread_mutex_lock, it blocks the calling thread until mutex is available and locks it
+pthread_mutex_unlock-> release mutex lock that calling thread previously acquired
+pthread_join-> it blocks thread until target thread has terminated
+pthread_self-> return id of calling thread
+pthread_mutex_destroy-> destroy mutex and releases any system resource it used
+
+// problem 6 main humne sikha how to pass arguments to function that executed by the thread
